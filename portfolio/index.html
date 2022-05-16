@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport"
+content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"/>
+<meta name="author" content="chae_A" />
+<meta name="description" content="포토폴리오 블로그" />
+<meta name="keywords" content="포토폴리오, 반응형, 패러럭스, 웹사이트, 기능구현, UI, UX, 황채아"/> 
+
+<title>PORTFOLIO 블로그</title>
+
+<!-- 파비콘 -->
+<link rel="apple-touch-icon" sizes="180x180" href="./public/icon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./public/icon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./public/icon/favicon-16x16.png">
+<link rel="manifest" href="./public/icon/site.webmanifest">
+<link rel="mask-icon" href="./public/icon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<!-- 아이콘 -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+<!-- CSS Link -->
+<link rel="stylesheet" href="./public/css/style.css">
+
+
+<!-- 브라우저 확인 --> <!-- HTLM5shiv ie6~8 -->
+<!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.min.js"></script>
+    <script type="text/javascript">
+        alert('현재 브라우저는 지원하지 않습니다. 크롬 브라우저를 추천합니다.!');
+    </script>
+<![endif]-->
+</head>
+
+
+<body>
+<!-- 스크롤값-->
+<!-- <div class="Scroll">scrollTop : <span>0</span></div> -->
+
+
+<!-- ---------- START ---------- -->
+<div id="wrap">
+
+    <!-- nav -->
+    <nav>
+        <div class="nav_container" autoplay loop>
+            <div class="rogo"> 
+                <a href="#"><img src="./public/images/rogo2.png" alt="홈페이지 로고"></a>
+            </div>
+            <ul class="nav_menu">
+
+                <audio id="audioContainer">
+                    <source id="audioSource" src="./public/audio/포폴음악.mp3" />
+                </audio>
+
+                <div class="js-onOffWrap">
+                    <button class="js-playBtn"><i class="xi-volume-up"></i></button>
+                    <button class="js-stopBtn"><i class="xi-volume-off"></i></button>
+                </div>
+
+
+                <li><a href="#">HOME<i class="xi-home"></i></a> </li>
+                <li id="navModal" >CONTACT<i class="xi-emoticon"></i> </li>
+
+            </ul>
+            
+        </div>
+    </nav>
+
+
+    <!-- -------- ^^레이아웃 -------- -->
+    <section id="container">
+
+        <!-- ---- ^^OPEN_PAGE ---- -->
+        <header id="openPage"
+        data-80="left:0%"
+        data-1500="left:-104%"
+        >
+            <section id="openPageCont">
+                <!-- openPage_left -->
+                <div class="openPage_L">
+                    <div class="row_1"></div>
+                    <article class="openPage_L_text">
+                        <p>Development Starts in 2022</p>
+                        <h1>CHAE_A</h1>
+                        <div> 
+                            <h3> Front Developer<br>Portfolio<br>Front Developer</h3>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- openPage_right -->
+                <div id="openPage_R">
+                    <div class="row_2"
+                    data-0="height: 50%"
+                    data-90="height: 65.5%"
+                    ></div>
+                    <article class="openPage_R_text">
+                        <h2>START PORTFOLIO</h2>
+                        <div>
+                            <p>SCROLL to begin <br>
+                            Your journey</p>
+                            <span><i class="xi-long-arrow-right"></i></span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </header>
+        <!-- ---- //OPEN_PAGE ---- -->
+        <!-- ---- ^^OPEN_List ---- -->
+        <aside id="openList"
+        data-1709="left:0%"
+        data-3100="left:-130%"
+        >
+
+            <!-- List_1 -->
+            <article 
+            data-300="left:30%"
+            data-1200="left:60%"
+            >
+                <span>1</span>
+                <div>
+                    <p> Let me introduce myself </p>
+                    <h2> View profile information</h2>
+                </div>
+            </article>
+            <!-- List_2 -->
+            <article 
+            data-300="left:40%"
+            data-1200="left:60%"
+            >
+                <span>2</span>
+                <div>
+                    <p> Check out CHA CHA's site and artwork </p>
+                    <h2> Site Introduction</h2>
+                </div>
+            </article>
+            <!-- List_3 -->
+            <article 
+            data-300="left:50%"
+            data-1100="left:60%"
+            >
+                <span>3</span>
+                <div>
+                    <p> Waiting for the day we'll meet soon </p>
+                    <h2> Contact Information</h2>
+                </div>
+            </article>
+
+            <!-- bottom_text -->
+            <h3
+            data-1300="left:9vw"
+            data-1840="left:0vw"
+            >Front Developer</h3>
+
+        </aside>
+        <!-- ---- //OPEN_List ---- -->
+        <!-- ---- ^^VERTICAL_MODE ---- -->
+        <main id="verticalMode"
+        data-3250="top: 0%"
+        data-7800="top: -100%"
+        >
+
+            <!-- ---- ^^PROFILE ---- -->
+            <section id="profileCont">
+                <div class="contents">
+                    <div class="profile_text">
+                        <h2> <strong>Creator</strong> of <br>high-quality <strong>development</strong>, developer of novel <strong>ideas</strong></h2>
+                        <h3>도전을 두려워하지 않고 새로운 것을 배우는 것은 저의 삶의 원동력입니다.<br>
+                        현재 이 시간의 가치를 생각하며 개발자가 되기 위해 공부하고 있습니다.<br>
+                        세상을 더 멋지게 만들고 가치와 감성을 전달하는 개발자가 되겠습니다.<br>
+                        </h3>
+                        <span> 황채아 </span>
+                    </div>
+                </div>
+
+                <!-- profile_img -->
+                <article id="sec3Img">
+                    <img src="./public/images/sec3_cha_poto.png" alt="프로필사진"
+                    data-2850="filter: grayscale(100%)"
+                    data-3100="filter: grayscale(0%)"
+                    />
+                </article>
+            </section>
+            <!-- ---- //PROFILE ---- -->
+            <!-- ---- ^^Site_&_animation ---- -->
+            <section id="siteAnimation">
+
+                <!-- ^^site_scroll_ONE -->
+                <section id="scrollOne">
+                
+                    <div class="scroll_One_cont">
+                    
+                        <article class="scrollOne_back"
+                        data-3400="top: 3.5%"
+                        data-3500="top: 3.5%"
+                        data-4200="top: 80%"
+
+                        >
+                            <p class="t1 ">2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO </p>
+                            <p class="t2 ">2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO </p>
+                            <p class="t3 ">2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO </p>
+                            <p class="t4 ">2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO </p>
+                            <p class="t5 ">2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO </p>
+                            <p class="t6 ">2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO </p>
+                            <p class="t7 ">2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO </p>
+                            <p class="t8 ">2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO </p>
+                            <p class="t9 ">2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO </p>
+                            <p class="t10">2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO </p>
+                            <p class="t11">2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO 2022PORTFOLIO </p>
+                        </article>
+
+
+                        <article class="scrollOne_ONE"
+                        data-3490="top: 9%; width: 30rem; height: 30rem"
+                        data-3600="top: 20%; width: 40rem; height: 40rem"
+                        data-3800="top: 55%; width: 50rem; height: 50rem"
+                        data-4100="top: 80%; width: 300rem; height: 300rem"
+                        >
+                            <p
+                            data-3390="font-size: 2.2rem; margin-top: 40%"
+                            data-3750="font-size: 2.5rem; margin-top: 40%"
+                            data-3900="font-size: 4rem; margin-top: 19%"
+                            data-4000="font-size: 4rem; margin-top: 10%"
+                            >Scroll Down & Explore</p>
+                            <i class="xi-mouse"></i>
+                        </article>
+
+                    </div>
+                </section>
+                <!-- //site_scroll_ONE -->
+                <!-- ^^ SITE  -->
+                <div id="siteContainer">
+
+                    <!-- 사이트 표지 -->
+                    <section class="site_title">
+                        <div class="site__row1">
+                            <article class="site__box">
+
+                                    <div class="gray_box_L"
+                                    data-4100="top: 10%"
+                                    data-4500="top: 0%"
+                                    ></div>
+                                    <div class="text_box site__title_text">
+                                        <em>Site Introduction</em>
+                                        <p>Check out CHA CHA's site and artwork</p>
+                                    </div>
+
+                            </article>
+                        </div>
+                    </section>
+                    <!-- 사이트 01 -->
+                    <section id="site01">
+                        <div class="site__row1">
+                            <article class="site__box">
+                                <div class="gray_box_R"
+                                data-4450="top: 20%"
+                                data-4950="top: 0%"
+                                ></div>
+                                <div class="site___content">
+                                    <p class="site_no"
+                                    data-4600="right: 25%"
+                                    data-4660="right: 0%"
+                                    >01</p>
+                                    <div class="site_desc">
+                                        <article class="site_desc_L">
+                                            <h3># Event site </h3>
+                                            <div class="site_desc_text01">
+                                                <h4>javasctipr, jquery, css, scss, html을 사용하여 구성한 이벤트 사이트 입니다.
+                                                    Kakao의 api를 사용하였고 Media Query
+                                                    사용하여 각 디바이스별 구성을 하였습니다.</h4>
+                                            </div>
+                                            <ul class="site_desc_text02">
+                                                <li>kakao api - 지도SDK와 로컬API를 통해 다양한 위치 표시</li>
+                                                <li>Media Query - 각각의 디바이스에 맞는 화면 구성</li>
+                                                <li>media query - Cross Browsing -  웹호환성 웹접근성</li>
+                                            </ul>
+                                            <a href="http://chea00.dothome.co.kr/site/event" target="_blank" class="site_btn" >go to the site ✓</a>
+                                        </article>
+                                        <article class="site_desc_R">
+                                            <figure>
+                                                <img src="./public/images/site/자몽_목업.png" alt="사이트 1번 이미지">
+                                            </figure>
+                                        </article>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                    <!-- 사이트 02 -->
+                    <section id="site01">
+                        <div class="site__row1">
+                            <article class="site__box site_01">
+                                <div class="gray_box_L"
+                                data-4750="top: 20%"
+                                data-5250="top: 0%"
+                                ></div>
+                                <div class="site___content_L">
+                                    <p class="site_no"
+                                    data-4950="right: 25%"
+                                    data-5000="right: 0%"
+                                    >02</p>
+                                    <div class="site_desc">
+                                        <article class="site_desc_L">
+                                            <h3># Kiosk </h3>
+                                            <div class="site_desc_text01">
+                                                <h4>Ajax를 이용하여 데이터를 동적으로 생성하고
+                                                    SCSS와 javascript 이용한 생동적인 텝 기능과 
+                                                    Animation 액션를 구현한 기업형 키오스크 사이트입니다</h4>
+                                            </div>
+                                            <ul class="site_desc_text02">
+                                                <li>Ajax - 동적인 메뉴 추가 전환 </li>
+                                                <li>Media Query -  각각의 디바이스에 맞는 화면 구성</li>
+                                                <li>Animation -  부드러운 모션 효과</li>
+                                            </ul>
+                                            <a href="http://chea00.dothome.co.kr/site/keyoder" target="_blank" class="site_btn" >go to the site ✓</a>
+                                        </article>
+                                        <article class="site_desc_R">
+                                            <figure>
+                                                <img src="./public/images/site/맘스_목업.png" alt="사이트 2번 이미지">
+                                            </figure>
+                                        </article>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                    <!-- 사이트 03 -->
+                    <section id="site01">
+                        <div class="site__row1">
+                            <article class="site__box site_01">
+                                <div class="gray_box_R"
+                                data-5050="top: 20%"
+                                data-5550="top: 0%"
+                                ></div>
+                                <div class="site___content">
+                                    <p class="site_no"
+                                    data-5250="right: 25%"
+                                    data-5300="right: 0%"
+                                    >03</p>
+                                    <div class="site_desc">
+                                        <article class="site_desc_L">
+                                            <h3># ResPonsive</h3>
+                                            <div class="site_desc_text01">
+                                                <h4>W3C권고한 웹표준에 필요한 인식의 용이성 ,운용의 용이성, 
+                                                    이해의용이성, 견고성을 바탕으로 Cross browsing, Media Query 를 
+                                                    사용해 모든 디바이스에서 자연스럽게 나오도록 사이트를 제작하였습니다.</h4>
+                                            </div>
+                                            <ul class="site_desc_text02">
+                                                <li>Web standards - 웹에서 표준적으로 사용되는 기술 규칙</li>
+                                                <li>Cross browsing - 웹 호환성 웹 접근성</li>
+                                                <li>Responsive - 모든 장치에서의 호환</li>
+                                            </ul>
+                                            <a href="http://chea00.dothome.co.kr/site/responsive_site" target="_blank" class="site_btn" >go to the site ✓</a>
+                                        </article>
+                                        <article class="site_desc_R">
+                                            <figure>
+                                                <img src="./public/images/site/반응형_목업.png" alt="사이트 3번 이미지">
+                                            </figure>
+                                        </article>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                    <!-- 사이트 04 -->
+                    <section id="site01">
+                        <div class="site__row1">
+                            <article class="site__box site_01">
+                                <div class="gray_box_L"
+                                data-5350="top: 20%"
+                                data-5850="top: 0%"
+                                ></div>
+                                <div class="site___content_L">
+                                    <p class="site_no"
+                                    data-5580="right: 25%"
+                                    data-5630="right: 0%"
+                                    >04</p>
+                                    <div class="site_desc">
+                                        <article class="site_desc_L">
+                                            <h3># Corporate site</h3>
+                                            <div class="site_desc_text01">
+                                                <h4>swiper.js를 사용해 이미지 슬라이드를 구현하였고, 
+                                                    텝 메뉴가 적용되었습 니다. SVG를 이용하여 아이콘을 비롯한
+                                                    이미지 최적화가 이루어졌습니다. Youtube API, 미디어 쿼리가 
+                                                    적용된 반응형 사이트입니다.</h4>
+                                            </div>
+                                            <ul class="site_desc_text02">
+                                                <li>media query - 각각의 디바이스에 맞는 화면 구성</li>
+                                                <li>swiper.js - 반응형 슬라이더</li>
+                                                <li>YoutubeAPi - 팝업을 이용한 영상 재생</li>
+                                            </ul>
+                                            <a href="http://chea00.dothome.co.kr/site/magarbox/" target="_blank" class="site_btn" >go to the site ✓</a>
+                                        </article>
+                                        <article class="site_desc_R">
+                                            <figure>
+                                                <img src="./public/images/site/메가_목업.png" alt="사이트 4번 이미지">
+                                            </figure>
+                                        </article>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                    <!-- 사이트 05 -->
+                    <section id="site01">
+                        <div class="site__row1">
+                            <article class="site__box site_01">
+                                <div class="gray_box_R"
+                                data-5650="top: 20%"
+                                data-6150="top: 0%"
+                                ></div>
+                                <div class="site___content">
+                                    <p class="site_no"
+                                    data-5910="right: 25%"
+                                    data-5960="right: 0%"
+                                    >05</p>
+                                    <div class="site_desc">
+                                        <article class="site_desc_L">
+                                            <h3># Summary blog</h3>
+                                            <div class="site_desc_text01">
+                                                <h4> PHP 와 MariaDB를 이용, 별로구성한 관리자페이지를 사용하여  
+                                                    쉽게 DB를 관리 하며 Ajax 를 이용한 동적인 데이터 표현과 
+                                                    날씨 api를 사용하여 실시간 날씨 표현 하고 각 디바이스별 반응형을 구성한 
+                                                    데이터공간을 자유롭게 정리한 블로그 사이트 입니다.</h4>
+                                            </div>
+                                            <ul class="site_desc_text02">
+                                                <li>PHP, Maria DB - 관계형데이터베이스 사용 동적인 페이지설계</li>
+                                                <li>Open Api - open api를 이용한 실시간 날씨 온도 표현</li>
+                                                <li>FTP - 클라이언트 서버를 사용한 프로젝트 정리 관리</li>
+                                            </ul>
+                                            <a href="http://chea00.dothome.co.kr" target="_blank" class="site_btn">go to the site ✓</a>
+                                        </article>
+                                        <article class="site_desc_R">
+                                            <figure>
+                                                <img src="./public/images/site/초록이_목업.png" alt="사이트 5번 이미지">
+                                            </figure>
+                                        </article>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                    <!-- 사이트 06 -->
+                    <section id="site01">
+                        <div class="site__row1">
+                            <article class="site__box site_01">
+                                <div class="gray_box_L"
+                                data-5950="top: 20%"
+                                data-6450="top: 0%"
+                                ></div>
+                                <div class="site___content_L">
+                                    <p class="site_no"
+                                    data-6220="right: 25%"
+                                    data-6270="right: 0%"
+                                    >06</p>
+                                    <div class="site_desc">
+                                        <article class="site_desc_L">
+                                            <h3># Exercise site</h3>
+                                            <div class="site_desc_text01">
+                                                <h4>Node.js 와 Nosql MongoDB를 사용하여 데이터를 관리하고, 
+                                                    Chart.js 를 사용하여 데이터분석을 할수있는 차트를 만들고 
+                                                    Bootstrap를 사용 Google클라우드의 의 node 서버를이용하여 
+                                                    배포한 운동 기록 사이트 입니다.</h4>
+                                            </div>
+                                            <ul class="site_desc_text02">
+                                                <li>Node.js - MongoDB 사용 동적인 페이지설계</li>
+                                                <li>Chart.js - 데이터 관리를 이용한 그래프차트 생성</li>
+                                                <li>Google - 구글 클라우드SDK이용한  노드서버를 사용</li>
+                                            </ul>
+                                            <a href="http://chachayoo.du.r.appspot.com/" target="_blank" class="site_btn" >go to the site ✓</a>
+                                        </article>
+                                        <article class="site_desc_R">
+                                            <figure>
+                                                <img src="./public/images/site/헬스_목업.png" alt="사이트 6번 이미지">
+                                            </figure>
+                                        </article>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+                    <!-- 사이트 07 -->
+                    <section id="site01">
+                        <div class="site__row1">
+                            <article class="site__box site_01">
+                                <div class="gray_box_R"
+                                data-6250="top: 20%"
+                                data-6750="top: 0%"
+                                ></div>
+                                <div class="site___content">
+                                    <p class="site_no"
+                                    data-6550="right: 25%"
+                                    data-6600="right: 0%"
+                                    >07</p>
+                                    <div class="site_desc">
+                                        <article class="site_desc_L">
+                                            <h3># React, Vue Site</h3>
+                                            <div class="site_desc_text01">
+                                                <h4> 리엑트 && 뷰를 사용하여 사이트 제작중입니다. </h4>
+                                            </div>
+                                            <ul class="site_desc_text02">
+                                                <li>리엑트 && 뷰를 사용하여 사이트 제작중입니다.  </li>
+                                                <li>  </li>
+                                                <li> </li>
+                                                <li> </li>
+                                            </ul>
+                                            <div class="site_btn" >go to the site ✓</div>
+                                        </article>
+                                        <article class="site_desc_R">
+                                            <figure>
+                                                <img src="./public/images/site/준비중_목업.png" alt="사이트 7번 이미지">
+                                            </figure>
+                                        </article>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                </div>
+
+
+                <!-- ---- ^^Animation ---- -->
+                <div id="AniContainer">
+
+                    <!-- ^^애니메이션 표지 -->
+                    <section class="ani_title">
+                        <div class="ani__row1">
+                            <article class="ani__box">
+
+                                    <div class="gray_box_L"></div>
+                                    <div class="text_box">
+                                        <em>Introducing other works</em>
+                                        <p>Check out CHA CHA's site and artwork</p>
+                                    </div>
+
+                            </article>
+                        </div>
+                    </section>
+                    <!-- //애니메이션 표지 -->
+                    <!-- ^^애니메이션 메인 -->
+                    <section id="aniMain">
+                        <div class="ani__row1">
+                            <article class="ani__box">
+                                <div class="gray_box_ani">
+                                    <p>#Introducing other works_Check out CHA CHA's site and artwork#</p>
+                                </div>
+
+                                <div class="ani___content">
+                                    <!-- ani_01 -->
+                                    <article class="ani_cont">
+                                        <div class="ani_tit">
+                                            <a href="http://chea00.dothome.co.kr/site/memo/"  target="_blank">APP Experience</a>
+                                        </div>
+                                        <div class="ani_img">
+                                            <div>
+                                                <img src="./public/images/sitepage/메모장_목업.png" alt="페이지 1번" class="ani_hover">
+                                            </div>
+                                        </div>
+                                        <div class="ani_text">
+                                            <p> 1.PHP </p>
+                                        </div>
+                                    </article>
+                                    <!-- ani_02 -->
+                                    <article class="ani_cont">
+                                        <div class="ani_tit">
+                                            <a href="http://chea00.dothome.co.kr/site/todo/"  target="_blank">APP Experience</a>
+                                        </div>
+                                        <div class="ani_img">
+                                            <div>
+                                                <img src="./public/images/sitepage/투두_목업.png" alt="페이지 2번" class="ani_hover">
+                                            </div>
+                                        </div>
+                                        <div class="ani_text">
+                                            <p> 2.Vanilla JS </p>
+                                        </div>
+                                    </article>
+                                    <!-- ani_03 -->
+                                    <article class="ani_cont">
+                                        <div class="ani_tit">
+                                            <a href="http://chea00.dothome.co.kr/site/saup/"  target="_blank">APP Experience</a>
+                                        </div>
+                                        <div class="ani_img">
+                                            <div>
+                                                <img src="./public/images/sitepage/사업자_목업.png" alt="페이지 3번" class="ani_hover">
+                                            </div>
+                                        </div>
+                                        <div class="ani_text">
+                                            <p> 3.Vanilla JS </p>
+                                        </div>
+                                    </article>
+
+                                </div>
+                            </article>
+
+                        </div>
+                    </section>
+                    <!-- //애니메이션 메인 -->
+                    <!-- ^^ ClOSE SCROLL -->
+                    <section class="scroll_close"
+                    data-7200="height: 20vh"
+                    data-7800="height: 0vh"
+                    >
+                        <div class="scroll_closeOne"></div>
+                    </section>
+                    <!-- // ClOSE SCROLL -->
+
+                </div>
+                <!-- ---- // Animation ---- -->
+            </section>
+            <!-- ---- //Site_&_animation ---- -->
+
+    </main>
+    <!-- ---- //VERTICAL_MODE ---- -->
+    <!-- ---- ^^footer ---- -->
+    <footer id="footer">
+        <div class="footer_wrap">
+            <div class="footer_row"></div>
+            <section class="footer_main">
+                <article class="footer_cont">
+                    <em>THANK YOU</em>
+                    <h5>새로운 도전을 하고 싶어 시작한 코딩이 삶의 많은 부분을 변화시켰습니다.<br> 
+                        배움에 있어서 늘 겸손한 자세로 피드백을 받아들이고,<br>
+                        포기하지 않는 끈기와 인내로 성장해 나가는 개발자가 되는 것이 저의 목표 입니다
+                    </h5>
+                    <div>
+                        <p class="modal_come">KEEP IN TOUCH!</p>
+                    </div>
+                    <h6>Waiting for the day we'll meet soon,</h6>
+                    
+
+                </article>
+            </section>
+            <div class="footer_bottom">
+                <p class="footer_text1">© Development Starts in 2022</p>
+                <p class="footer_text2">Site design, development and animation Chae_A</p>
+            </div>
+        </div>
+    </footer>
+    <!-- ---- //footer ---- -->
+    <!-- ---- ^^FOOTER_MODAL ---- -->
+    <section id="modal">
+        <div class="modal_cont"> 
+            <!-- main -->
+            <article>
+                <h2>I WAS WAITING FOR YOU</h2>
+                <ul class="modal_introduce" >
+                    <li>Name : 황 채 아</li>
+                    <li>Phone_number :  010 - 7700 - 2876</li>
+                    <li>Email_address :  chae_a_@naver.com</li>
+                    <li>KakaoTalk_ID :  chae_A_</li>
+                </ul>
+                <div class="modal_guest">
+                    <p>연락을 기다리고 있을게요</p>
+                    <img src="./public/images/image_c.png" alt="챠챠캐릭터">
+                </div>
+                <div id="modalToday" class="modal_today">TODAY</div>
+                <div class="modal_btn_cont">
+                    <a href="tel:01077002876" class="chaeA_call">
+                        <p>전화 하기 <i class="xi-call"></i></p>
+                    </a>
+                    <a href="sms:01077002876" class="chaeA_call">
+                        <p>문자 보내기 <i class="xi-mail"></i></p>
+                    </a>
+                </div>
+            </article>
+            <!-- icon -->
+            <article class="modal_icon"> <i class="xi-close"></i> </article>
+        </div>
+    </section>
+    <!-- ---- //FOOTER_MODAL ---- -->
+    <!-- -------- //레이아웃 -------- -->
+    </section>
+<!-- ---------- END ---------- -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 스크립트 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+
+<script src="./public/js/main.js"></script>
+
+
+</body>
+</html>

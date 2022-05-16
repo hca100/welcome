@@ -1,0 +1,96 @@
+    @charset "utf-8";
+
+
+    @font-face {
+    font-family: 'mainfont';
+    src: url('../font/Azonix.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'score1';
+    src: url('../font/SCDream1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'score2';
+    src: url('../font/SCDream2.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'score3';
+    src: url('../font/SCDream3.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'score4';
+    src: url('../font/SCDream4.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'score5';
+    src: url('../font/SCDream5.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'score6';
+    src: url('../font/SCDream6.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'score7';
+    src: url('../font/SCDream7.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'score8';
+    src: url('../font/SCDream8.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'score9';
+    src: url('../font/SCDream9.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'ACC';
+    src: url('../font/ACC.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+
+    $main: 'mainfont';
+    $acc: 'ACC';
+    $s1: 'score1';
+    $s2: 'score2';
+    $s3: 'score3';
+    $s4: 'score4';
+    $s5: 'score5';
+    $s6: 'score6';
+    $s7: 'score7';
+    $s8: 'score8';
+    $s9: 'score9';
+
+    $ww_ : #fff;
+    $rr_ : #620909; 
+    $bb_ : #000; 

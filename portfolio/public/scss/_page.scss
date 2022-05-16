@@ -1,0 +1,332 @@
+@charset "utf-8";
+
+/* 공용 */
+body{ width: 100vw; height: 100vh; color: $ww_; overflow-x: hidden; font-size: 1rem; font-family: $s4; background-color: #000;font-size: 10rem;}
+.Scroll { width: 20%; height: 5%; background-color: rgba(128, 128, 128, 0.788); position: fixed; bottom: 0; z-index: 20000; font-size: 4rem;}
+
+
+/* ---- ^^_NAV ---- */
+nav { width: 100%; height: 6%; position: fixed; top:0; left: 0; z-index: 500000; color: #bcbcbc; font-size: 1.5vw;}
+.nav_container { width: 100%; height: 100%; display: flex; justify-content: space-between; align-items: center;  
+    //로고
+    .rogo { width: 5%; height: 100%;  margin-left: 1vw;
+        a { height: 100%; display: flex; align-items: center; justify-content: center; }
+        img { border-radius: 50%; width: 2vw; height: 2vw; border: 1px solid #fff;  }
+    }
+    //메뉴
+    .nav_menu { height: 100%; margin: 0 1vw; display: flex; margin: 0 1vw; align-items: center; 
+        //오디오디자인
+        .js-onOffWrap {  background-color: transparent;
+            button {  background-color: transparent; border: 0; cursor: pointer; color: #bcbcbc; font-size: 1.5vw; }
+            button:hover { color: rgb(122, 122, 122); }
+        } 
+        //네비 아이콘
+        li, a{ margin: auto 1vw; color: #bcbcbc; font-size: 1vw; cursor: pointer; border: 0; }
+        li { border-bottom: 1px dashed rgb(122, 122, 122); }
+        li:hover, a:hover { color: rgb(122, 122, 122); }
+    }
+}
+/* ---- //_NAV ---- */
+/* ---- ^^_MODAL ---- */
+#modal { display: none; position: fixed; z-index: 200000; top: 0; width: 100vw; height: 100vh; background-color: rgba(37, 37, 37, 0.518);
+    .modal_cont { position: relative; width: 40%; height: 100%; margin: 0 auto;  display: flex; justify-content: center; align-items: center; font-size: 1.5vw;}
+    article:nth-child(1) { width: 100%; height: 90%; text-align: center;
+        background: url(../images/PROFILE_backG_B.png) no-repeat center center; background-size: cover; 
+        background-color: $bb_; border-radius: 2vw; 
+        box-shadow: 3px 3px 20px 5px rgb(255, 255, 255);
+        display: flex; flex-direction: column; justify-content: space-around; align-items: center;
+        
+            h2 { height: 15%; line-height: 10vw;  font-family: $main; font-size: 2vw;  }
+            .modal_introduce { height: 30%; width: 90%; background-color: $bb_; border-radius: 10px; 
+                display: flex; flex-direction: column; justify-content: space-evenly;
+                
+            }
+            .modal_guest { width: 90%; font-family: $acc; 
+                img { width: 10%; }
+            }
+            .modal_today {font-family: $acc;}
+            .modal_btn_cont { height: 10%;  width: 90%; margin-bottom: 1vw; display: flex; justify-content: space-evenly; align-items: center; text-align: center;
+                
+                .chaeA_call { width: 40%; height: 60%; line-height:3vw; background-color: $ww_; color: $bb_; 
+                    background-color: $ww_; border-radius: 5px; border: 2px solid #999;  
+                }
+                .chaeA_call:hover { color: $ww_; background-color: $rr_;}
+            }
+    }
+
+    article:nth-child(2) { position: absolute; right: -10%; top: 5%;  font-size: 2.8vw;  background-color: $bb_; font-weight: bold; border: 1px solid $ww_; border-radius: 10px;}
+    .modal_icon:hover {  background-color: $ww_; color: $bb_;}
+}
+/* ---- //_MODAL ---- */
+
+
+
+
+
+/* -------- START ------- */
+#wrap { width: 100%; height: 100%;}
+
+    /* -------- 레이아웃 -------- */
+    #container{  position: fixed; z-index: 6000; width: 100%; height: 1700vh; background-color: #888;  display: block; 
+        //가로모드
+        #openPage { position: absolute; z-index: 10000; width: 101%; height: 100vh; top: 0%; left: 0%; background-color: rgb(9, 9, 9); border-radius:0 40px 40px 0; }
+        #openList { position: absolute; z-index: 9000;  width: 120%; height: 100vh; top: 0%; left: 0%; background-color: $rr_; border-radius:0 40px 40px 0; }
+        //세로모드
+        #verticalMode { position: absolute; z-index: 8500;  width: 120%; height: 100vh; top: 0%; left: 0%; color: #000; 
+            background: url(../images/PROFILE_backG_W.png) no-repeat center center; background-size: cover;
+            /* -------- ^^Site_&_animation  -------- */
+            #siteAnimation{ position: absolute; z-index: 7000; width: 100vw; height: 100%; display: block; 
+                #scrollOne { display: block; overflow: hidden; height: 300vh; }
+                //사이트, 애니메이션
+                #siteContainer, #AniContainer { width: 100vw; color: $ww_; background-color: $bb_; font-family: $main;
+                    section { height: 120vh;  }
+                    .site_title, .ani_title { height: 120vh; }
+                }
+            }
+        }
+        #footer { z-index: 6000;}
+    }
+
+
+    /* ---- ^^OPEN_PAGE ---- */
+    #openPageCont { width: 100%; height: 100%; display: flex; font-family: $main;
+        /* OPEN_PAGE____left */
+        .openPage_L { width: 70%; border-right: 1px solid $rr_; display: block;
+            .row_1 { width: 100%; height: 40%; border-bottom: 1px solid $rr_; margin-bottom: 11%; }
+            .openPage_L_text { width: 98%; margin-left: 2%; height: 40%;  font-family: $main; overflow: hidden;
+                p { font-size: 2.5vw; color: $rr_; margin-bottom: 4%; }
+                h1 { font-size: 9.9vw; margin: 3vh 0;  }
+                div { position: relative; width: 100%; height: 3vw; overflow: hidden; 
+                    h3 { position: absolute; width: 100%; top: 0%; left: 0%; font-size: 4vw; animation: slide_UP 3s ease-in-out infinite; }
+                }
+                @keyframes slide_UP {
+                0% { top: 0; }
+                50% { top:-4vw; }
+                100% { top:-8vw; }
+                }
+            }
+        }
+
+        /* OPEN_PAGE____right */
+        #openPage_R { width: 30%; height: 100%;  display: block;
+            .row_2 { width: 100%; height: 50%;}
+            .openPage_R_text { width: 100%; height: 50%; 
+                h2{ font-size: 2.5vw; text-align: center; padding: 3vh 0 19vh 0; border-top: 5px solid #620909; }
+                div { display: flex; color: #888; animation: colorC 3s ease-in-out infinite;
+                    p { font-size: 1.5vw;  width: 70%; text-align: right; }
+                    span { font-size: 2.7vw; width: 10%;  animation: colorW 3s ease-in-out infinite; }
+                }
+                @keyframes colorC {
+                0% { color: #888; }
+                50% { color: $ww_; }
+                100% { color:  #888; }
+                }
+                @keyframes colorW {
+                    0% { color: #888; margin-left: 0vw; }
+                    50% { color: $ww_; margin-left: 1vw; }
+                    100% { color:  #888; margin-left: 0vw; }
+                    }
+            }
+        }
+    } 
+    /* ---- //OPEN_PAGE ---- */
+
+
+    /* ---- ^^OPEN_List ---- */
+    #openList { 
+        /* List1,2,3 */
+        article:nth-child(1){ position: absolute; top: 20%; left: 90%; transform: translate(-50%, -50%);}
+        article:nth-child(2){ position: absolute; top: 40%; left: 90%; transform: translate(-50%, -50%);}
+        article:nth-child(3){ position: absolute; top: 60%; left: 90%; transform: translate(-50%, -50%);}
+
+        article { font-size: 4vw; border-bottom: 1px solid $ww_; display: block; width: 50%; display: flex; align-items: flex-end; 
+            span { font-size: 1.8vw; border: 2px solid $ww_; border-radius: 40%; width: 3.5vw; height: 3vw; text-align: center;  line-height: 3.4vw; margin: 0% 2% 1.5% 1%; }
+            p { font-size: 1.488vw; color: rgba(170, 170, 170, 0.933); margin-bottom: 1%; }
+        }
+        /* bottom_text */
+        h3 { position: absolute; bottom: -3vw; left: 9vw; font-family: $main; font-size: 10vw; }
+    }
+    /* ---- //OPEN_List ---- */
+
+
+    /* ---- ^^VERTICAL_MODE ----  */
+    #verticalMode { 
+
+        /* ---- ^^PROFILE ---- */
+        #profileCont{  width: 90vw; height: 100%; margin: 0 5vw; display: flex; justify-content: center; align-items: center;
+            .contents { width: 60%; display: flex; justify-content: center; align-items: center; 
+                .profile_text { width: 100%; height: 100%;  display: flex; flex-direction: column; justify-content: space-between;
+                    
+                    h2 {  width: 100%; height: 80%; font-size: 5.3vw; text-align: center; font-family: $main; display: block; margin: 0 auto; }
+                        strong { color: $rr_; font-family: $main;}
+                    h3 { width: 100%;text-align: center; font-size: 1.1vw; color: #555; margin:3% auto 0 auto; line-height: 1.6vw; }
+                        span {  display: block; font-size: 2.5vw; margin: 1% 8%; text-align: end; font-family: $acc; color: $rr_; }
+                }
+            }
+            /*profile_img*/
+            #sec3Img { width: 40%; text-align: center; 
+            img { width: 80%; filter: grayscale(100%); }
+            }
+        }
+        /* ---- //PROFILE ---- */
+
+        /*  ---- ^^Site_&_animation ----  */
+        #siteAnimation {
+            
+            /* ^^site_scroll_ONE */
+            #scrollOne { background-color: #fff;  height: 100%;
+
+                .scroll_One_cont {  position: relative; height: 100%; color: rgb(255, 255, 255); 
+                    .scrollOne_back {position: absolute; height: 30%; width: 100%;  top:3.5%; display: block; font-size: 6rem; color: rgba(153, 153, 153, 0.397); white-space: nowrap;
+                        p {position: absolute; margin: 0.5vh 0;  animation: h4text 7s linear infinite;  }
+                        p:nth-child(even) {position: absolute; transform: rotate(-180deg); animation: h4text2 7s linear infinite;  }
+                        .t2 { top: 6%  }
+                        .t3 { top: 14% }
+                        .t4 { top: 20% }
+                        .t5 { top: 28% }
+                        .t6 { top: 34% }
+                        .t7 { top: 42% }
+                        .t8 { top: 48% }
+                        .t9 { top: 56% }
+                        .t10 {top: 62% }
+                        .t11 {top: 70% }
+                    }
+
+                    .scrollOne_ONE { position: absolute; transform: translateX(-50%); left: 50%; top: 0%; 
+                        width: 30rem; height: 30rem; background-color: #000; border-radius: 50%; text-align: center;  box-shadow: 5px 5px 90px 30px #999;
+                        p { display: block; font-size: 2rem; margin-top: 35%;  }
+                        .xi-mouse { display: block; height: 5%; font-size: 3.2vw; line-height: 1vw; 
+                        color: #fff;  animation: h4mouse 1s linear infinite;  }
+                    }
+                    @keyframes h4mouse {
+                    0% { margin-top: 3rem; }
+                    100% { margin-top: 9rem; text-shadow: 0px -7px 10px rgb(255, 255, 255); }
+                    }
+                }
+                @keyframes h4text {
+                    0% { left: 0 }
+                    100% { left: -490px; }
+                }
+                @keyframes h4text2 {
+                    0% { right: 0 }
+                    100% { right:-490px; }
+                }
+            }
+            /* //site_scroll_ONE */
+
+
+            /*  ^^Site_&_animation  */
+            .site__row1, .ani__row1 { width: 95%; height: 100%; margin: 0 auto; overflow: hidden; }
+                .site__box { height: 70%; position: relative; top:50%; transform: translateY(-50%); }
+                    .gray_box_L {  position: absolute; left: 0; width: 75%; height: 100%;  background: url(../images/PROFILE_backG_B.png) no-repeat center center; background-size: cover; }
+                    .gray_box_R {  position: absolute; right: 0; width: 75%; height: 100%; background: url(../images/PROFILE_backG_B.png) no-repeat center center; background-size: cover; }
+                
+                .ani__box { height: 80%; position: relative; top:50%; transform: translateY(-50%); }
+                    .gray_box_ani {  position: absolute; right: 0; width: 100%; height: 100%; font-size: 2vw; 
+                        p {color: #555; line-height: 5vw; text-align: center;}
+                    }
+
+
+                    /* SITE & ANI___TITLE-- */
+                    .text_box { position: absolute; top: 50%; transform: translateY(-50%); margin-left: 1vw; 
+                        em { font-size: 9vw;}
+                        p { font-size: 3.2vw; white-space: nowrap; border-top: 2px dashed $ww_; padding-top: 1vw; width: 83%; color: #777;}
+                    }
+
+                        /*  ^^ SITE__01-07   */
+                        .site___content { position: absolute; height: 90%; width: 90%;  bottom: 0; border-bottom: 10px solid #ffffffd2;  }
+                        .site___content_L { position: absolute; height: 90%; width: 90%; right: 0; bottom: 0; border-bottom: 10px solid  #ffffffd2; }
+                            .site_no { position: absolute; bottom: 0; right: 0%; font-size: 10vw; line-height: 5vw; color: #ffffff65; } 
+                            .site_desc { position: absolute; border: 1px solid $ww_; width: 80%; height: 90%; left: 0%; bottom: 0; display: flex; background-color: rgb(29, 29, 29);box-shadow: 1px 1px 10px 3px #999; }
+
+
+                                /* 사이트설명 */
+                                .site_desc_L {  width: 37%; height: 92%; margin: 2% 1% 2% 3%; display: flex; flex-direction: column; justify-content: space-between; right: 0; 
+                                    h3 {position: absolute;  top:-6.5%; font-size: 2vw; }
+                                    .site_desc_text01 { padding: 2% 4%; height: 30%; display: flex; justify-content: center; align-items: center; border: 1px solid $ww_;
+                                        h4{font-size: 1.1vw;  }
+                                    }
+                                    .site_desc_text02 { height: 40%; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; 
+                                        li{width: 100%; font-size: 1vw; border-bottom: 1px solid $ww_; padding: 3% 0;   }
+                                    }
+                                    .site_btn { width: 100%; height: 10%; font-size: 1.5vw; line-height: 3.4vw; border: 2px solid $ww_; border-radius: 10px 10px 0 0; text-align: center;
+                                        color: $ww_; background-color: rgba(85, 85, 85, 0.553); }
+                                    .site_btn:hover { cursor: pointer; color: $rr_;  background-color: rgb(255, 255, 255);  }
+                                }
+
+                                /* 사이트이미지 */
+                                .site_desc_R { width: 57%; height: 92%; margin: 2% 3% 2% 1%; border: 1px solid $ww_; display: flex; justify-content: center; align-items: center;   
+                                    figure { height: 100%; width: 100%; text-align: center; 
+                                        img { width: 100%; height: 100%; transition: all 3s ease; }
+                                    }
+                                }
+
+
+
+                        /*  ^^ Animation 01~03  */
+                        .ani___content { position: absolute; height: 90%; width: 100%;  bottom: 0;
+                            display: flex; justify-content: space-around; align-items: center;
+                            .ani_cont {  width: 30%; height: 100%; font-size: 2vw; border: 1px solid $ww_; border-radius: 5px;
+                                background: url(../images/PROFILE_backG_B.png) no-repeat center center; background-size: cover; 
+                                box-shadow: 1px 1px 10px 3px #999;
+                                .ani_tit { height: 15%; display: flex; justify-content: center; align-items: center;
+                                    a { width: 75%; height: 3vw; line-height: 3vw; color: #fff; text-align: center; font-size: 1.5vw; border: 1px solid $ww_; border-radius: 20px;}
+                                    a:hover { background-color: rgba(255, 255, 255, 0.29); color: $bb_;}
+                                }
+                                .ani_img {  height: 70%; display: flex; justify-content: center; align-items: center;
+                                    div { width: 90%; height: 90%;
+                                        .ani_hover { width: 100%; height: 100%; border-radius: 50%; transition: border-radius 0.3s ease; }
+                                        .ani_hover:hover { border-radius: 10%; }
+                                    }
+                                }
+                                .ani_text { height: 15%; display: flex; justify-content: center; align-items: center;
+                                    p {  width: 75%; text-align: center;  }
+                                    p:hover { color: #999;}
+                                }
+                            }
+                        }
+
+                /*  ^^ ClOSE SCROLL  */
+                .scroll_close { width: 100%; height: 20vh; background:gray;
+                    position: relative;
+                    .scroll_closeOne { position: absolute; top: 0%; width: 110%; height: 150%; border-bottom-left-radius: 50%; border-bottom-right-radius: 50%; 
+                        background-color: #000; transform: translateX(-50%); left: 50%; }
+                }
+
+        }
+        /*  ---- //Site_&_animation ----  */
+    }
+    /* ---- ^^VERTICAL_MODE ----  */
+    /* ---- ^^FOOTER ----  */
+    footer { background: url(../images/PROFILE_backG_W.png) no-repeat center center; background-size: cover;
+        color: #000; width: 100vw; height: 100vh; 
+        .footer_wrap { width: 100%; height: 100%; font-size: 2vw;
+            .footer_row { height: 10%; }
+            .footer_main { height: 80%; 
+                .footer_cont {  height: 100%; display: flex; flex-direction: column; justify-content: space-evenly; align-items: center; text-align: center;
+                    em { font-family: $main;  font-size: 10vw; border-bottom: 2px solid $rr_; text-shadow: 2px 2px 2px #620909;}
+                    h5 { width: 60%; font-size: 1.5vw; line-height: 2.2vw;}
+                    div { width: 20%; height: 4vw; font-family: $acc; font-weight: bold;
+                        p { width: 100%; height: 100%; line-height: 3.5vw; color: $ww_; border-radius: 2vw; background-color: $bb_; 
+                            box-shadow: 0.5px 0.5px 15px 1px rgb(172, 172, 172); animation: footerP 1s linear infinite; }
+                        p:hover { background-color: $rr_; cursor: pointer;}
+                    }
+                    @keyframes footerP {
+                        0% { color: $ww_; }
+                        100% { color: #e9fd0e; font-size: 2.1vw; }
+                    }
+                    h6 { font-size: 1.5vw; color: #555; text-align: end; font-family: $main; }
+                }
+            }
+            .footer_bottom { height: 10%; font-size: 1vw; display: flex; justify-content: space-around; align-items: center;
+                p { width: 45%; color: rgba(0, 0, 0, 0.789); }
+                .footer_text1  { text-align: start;}
+                .footer_text2  { text-align: end;}
+            }
+        }
+    }
+    /* ---- //FOOTER ----  */
+/* ---------- END ----------  */
+
+
+
